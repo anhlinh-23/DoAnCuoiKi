@@ -1,0 +1,225 @@
+﻿@model IEnumerable<WebBanHangOnline.Models.EF.Product>
+@{
+    ViewBag.Title = "Danh Sách Sản Phẩm";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">
+
+<style>
+        .logo_container a {
+            font-size: 35px;
+            color: #1e1e27;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .top_nav {
+            width: 100%;
+            height: 50px;
+            background: #FFFFFF;
+        }
+
+        .top_nav_left {
+            height: 50px;
+            line-height: 50px;
+            font-size: 15px;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .account {
+            display: inline-block;
+            position: relative;
+            min-width: 50px;
+            padding-left: 20px;
+            text-align: center;
+            vertical-align: middle;
+            background: #FFFFFF;
+        }
+
+            .account > a {
+                display: block;
+                color: black;
+                font-weight: 400;
+                height: 50px;
+                line-height: 50px;
+                font-size: 15px;
+            }
+
+        .newsletter_submit_btn {
+            width: 160px;
+            height: 46px;
+            border: none;
+            background: black;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+            .newsletter_submit_btn:hover {
+                background: #51545f;
+            }
+        /*filter*/
+        .ui-state-default,
+        .ui-widget-content .ui-state-default,
+        .ui-widget-header .ui-state-default,
+        .ui-button,
+        /* We use html here because we need a greater specificity to make sure disabled
+    works properly when clicked or hovered */
+        html .ui-button.ui-state-disabled:hover,
+        html .ui-button.ui-state-disabled:active {
+            /*border: 1px solid #c5c5c5;*/
+            background: black;
+            font-weight: normal;
+            color: #454545;
+        }
+
+        .ui-slider .ui-slider-range {
+            position: absolute;
+            z-index: 1;
+            font-size: .7em;
+            display: block;
+            border: 0;
+            background-position: 0 0;
+            background-color: black;
+        }
+
+        /*ảnh sản phẩm*/
+        .product_image img {
+            width: 80%;
+        }
+
+        .grid_sorting_button.active:hover {
+            background: #51545f !important;
+        }
+
+        .grid_sorting_button.active {
+            color: #FFFFFF;
+            background: black;
+        }
+
+        .product_price {
+            font-size: 16px;
+            color: black;
+            font-weight: 600;
+        }
+
+        .red_button {
+            display: -webkit-inline-box;
+            display: -moz-inline-box;
+            display: -ms-inline-flexbox;
+            display: -webkit-inline-flex;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: 40px;
+            background: black;
+            border-radius: 3px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+            .red_button:hover {
+                background: #3a3a3a !important;
+            }
+
+            .red_button a {
+                display: block;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 500;
+                text-align: center;
+                line-height: 40px;
+                width: 100%;
+            }
+
+        .add_to_cart_button {
+            width: 100%;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+            .add_to_cart_button a {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+        .product-item:hover .add_to_cart_button {
+            visibility: visible;
+            opacity: 1;
+        }
+</style>
+
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li class="active"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Sản phẩm</a></li>
+                </ul>
+            </div>
+
+            <!-- Sidebar -->
+
+            <div class="sidebar">
+                <div class="sidebar_section">
+                    <div class="sidebar_title">
+                        <h5>Danh mục</h5>
+                    </div>
+
+                </div>
+
+                <!-- Price Range Filtering -->
+            </div>
+
+            <!-- Main Content -->
+
+            <div class="main_content">
+
+                <!-- Products -->
+
+                <div class="products_iso">
+                    <div class="row">
+                        <div class="col">
+
+                            <!-- Product Sorting -->
+                            <!-- Product Grid -->
+
+                            <div class="product-grid">
+
+                                <!-- Product 1 -->                         
+                            </div>
+                            <!-- Product Sorting -->
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Content/assets/js/categories_custom.js"></script>
+}
